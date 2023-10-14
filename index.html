@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Twitter Clone</title>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f0f0f0;
+      }
+
+      h1 {
+        background-color: #1da1f2;
+        color: #fff;
+        padding: 10px;
+        text-align: center;
+      }
+
+      .tweet {
+        border: 1px solid #ccc;
+        padding: 10px;
+        margin: 10px;
+        background-color: #fff;
+      }
+
+      .tweet p {
+        margin: 0;
+      }
+
+      .tweet img {
+        width: 50px;
+      }
+
+      .notification {
+        font-weight: bold;
+        border: solid 1px gray;
+        border-radius: 8px;
+        position: absolute;
+        top: 16px;
+        left: 16px;
+        padding: 16px;
+      }
+
+      .notification.success {
+        background-color: rgb(125, 254, 125);
+      }
+
+      .notification.error {
+        background-color: rgb(255, 128, 128);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Twitter Clone</h1>
+    <section id="notifications"></section>
+    <section id="tweets"></section>
+
+    <script type="module" src="./index.js"></script>
+  </body>
+</html>
