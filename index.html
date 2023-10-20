@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Twitter Clone</title>
+    <link rel="stylesheet" href="./notifications/style.css" />
+    <link rel="stylesheet" href="./loader/style.css" />
 
     <style>
       body {
@@ -34,28 +36,12 @@
       .tweet img {
         width: 50px;
       }
-
-      .notification {
-        font-weight: bold;
-        border: solid 1px gray;
-        border-radius: 8px;
-        position: absolute;
-        top: 16px;
-        left: 16px;
-        padding: 16px;
-      }
-
-      .notification.success {
-        background-color: rgb(125, 254, 125);
-      }
-
-      .notification.error {
-        background-color: rgb(255, 128, 128);
-      }
     </style>
   </head>
   <body>
     <h1>Twitter Clone</h1>
+    <nav id="session"></nav>
+    <section id="loader"></section>
     <section id="notifications"></section>
     <section id="tweets"></section>
 

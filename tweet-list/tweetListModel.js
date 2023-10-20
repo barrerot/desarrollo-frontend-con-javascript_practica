@@ -1,15 +1,14 @@
 const transformTweets = (tweets) => {
   return tweets.map(tweet => ({
-    handler: tweet.name,
+    handler: tweet.user.username,
     date: new Date().toISOString(),
-    message: tweet.description,
-    likes: tweet.price,
-    photo: tweet.picture,
+    message: tweet.message,
+    id: tweet.id
   }))
 }
 
 export const getTweets = async () => {
-  const url = "http://localhost:8000/api/items";
+  const url = "http://localhost:8000/api/tweets?_expand=user";
   let parsedTweets = [];
 
   try {

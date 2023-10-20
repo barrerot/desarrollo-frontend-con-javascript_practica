@@ -6,10 +6,13 @@ export const tweetListController = async (tweetList) => {
   let tweets = [];
 
   try {
+    dispatchEvent('startLoadingTweets', null, tweetList);
     tweets = await getTweets();
   } catch (error) {
     const event = createCustomEvent('error', 'Error cargando tweets')
     tweetList.dispatchEvent(event);
+  } finally {
+    dispatchEvent('finishLoadingTweets', null, tweetList);
   }
 
   if (tweets.length === 0) {
@@ -43,4 +46,12 @@ const createCustomEvent = (type, message) => {
   });
 
   return event;
+}
+
+const dispatchEvent = (eventName, data, element) => {
+  const event = new CustomEvent(eventName, {
+    detail: data
+  });
+
+  element.dispatchEvent(event);
 }
