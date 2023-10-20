@@ -1,4 +1,4 @@
-import { tweetCreationController } from "./tweetCreationController.js";
+import { anuncioCreationController } from "./anuncioCreationController.js";
 import { notificationsController } from "../notifications/notificationsController.js";
 
 const token = localStorage.getItem('token');
@@ -7,15 +7,15 @@ if (!token) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  const tweetCreation = document.querySelector('#tweetCreation');
+  const anuncioCreation = document.querySelector('#anuncioCreation');
 
   const notifications = document.querySelector('#notifications');
   const showNotification = notificationsController(notifications);
 
-  tweetCreation.addEventListener('tweetCreated', (event) => {
+  anuncioCreation.addEventListener('anuncioCreated', (event) => {
     showNotification(event.detail.message, event.detail.type);
   });
 
-  tweetCreationController(tweetCreation);
+  anuncioCreationController(anuncioCreation);
 
 })

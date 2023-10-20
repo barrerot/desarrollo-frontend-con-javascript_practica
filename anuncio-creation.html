@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>crea tu anuncio!</title>
+    <link rel="stylesheet" href="./notifications/style.css" />
+  </head>
+  <body>
+    <section id="notifications"></section>
+    <form id="anuncioCreation">
+      <label for="descripcion">Descripción:</label>
+        <textarea id="descripcion" name="descripcion" cols="30" rows="10" required></textarea>
+      <br>
+      <label for="imagen">imagen:</label>
+      <input type="text" id="imagen"  name="imagen" />
+      <label for="tipo">Tipo:</label>
+        <select id="tipo" name="tipo">
+            <option value="venta">Venta</option>
+            <option value="compra">Compra</option>
+        </select>
+        <br>
+        <label for="precio">Precio:</label>
+        <input type="number" id="precio" name="precio" required>
+        <br>
+
+      <button type="submit">Crear anuncio</button>
+    </form>
+
+    <script type="module" src="./anuncio-creation/index.js"></script>
+  </body>
+</html>

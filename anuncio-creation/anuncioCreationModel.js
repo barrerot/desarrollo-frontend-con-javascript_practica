@@ -1,9 +1,11 @@
-export const createTweet = async (message) => {
-  const url = "http://localhost:8000/api/tweets";
+export const createanuncio = async (description, type, price, image) => {
+  const url = "http://localhost:8000/api/anuncios";
   const token = localStorage.getItem('token');
-
   const body = {
-    message: message
+    description: description,
+    type: type,
+    price: price,
+    image: image
   }
 
   let response;
