@@ -1,7 +1,8 @@
-export const createanuncio = async (description, type, price, image) => {
+export const createanuncio = async (nombre,description, type, price, image) => {
   const url = "http://localhost:8000/api/anuncios";
   const token = localStorage.getItem('token');
   const body = {
+    nombre:nombre,
     description: description,
     type: type,
     price: price,

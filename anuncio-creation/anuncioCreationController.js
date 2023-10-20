@@ -7,15 +7,16 @@ export const anuncioCreationController = (anuncioCreation) => {
     event.preventDefault();
 
     const formData = new FormData(anuncioCreation);
-    const description = formData.get("descripcion");alert('en controlador');
-    alert(description);
+    const description = formData.get("descripcion")
+  
 
     const type= formData.get("tipo");
+    const nombre=formData.get("nombre");
     const price=formData.get("precio");
     const image=formData.get("imagen");
 
     try {
-      await createanuncio(description, type, price, image);
+      await createanuncio(nombre,description, type, price, image);
       dispatchEvent('anuncioCreated', { type: "success", message: "Anuncio creado correctamente" }, anuncioCreation);
       setTimeout(() => {
         window.location = "index.html";
