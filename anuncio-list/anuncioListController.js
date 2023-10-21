@@ -1,24 +1,24 @@
-import { getTweets } from "./tweetListModel.js";
-import { buildTweet, emptyTweets } from "./tweetListView.js";
+import { getanuncios } from "./anuncioListModel.js";
+import { buildanuncio, emptyanuncio } from "./anuncioListView.js";
 
-export const tweetListController = async (tweetList) => {
+export const anuncioListController = async (tweetList) => {
   tweetList.innerHTML = '';
-  let tweets = [];
+  let anuncios = [];
 
   try {
     dispatchEvent('startLoadingTweets', null, tweetList);
-    tweets = await getTweets();
+    anuncios = await getanuncios();
   } catch (error) {
     const event = createCustomEvent('error', 'Error cargando tweets')
     tweetList.dispatchEvent(event);
   } finally {
     dispatchEvent('finishLoadingTweets', null, tweetList);
   }
-
-  if (tweets.length === 0) {
-    tweetList.innerHTML = emptyTweets();
+//console.log(anuncios);
+  if (anuncios.length === 0) {
+    tweetList.innerHTML = emptyanuncio();
   } else {
-    renderTweets(tweets, tweetList);
+    renderanuncios(anuncios, tweetList);
 
     const event = createCustomEvent('success', 'Tweets cargados correctamente');
     tweetList.dispatchEvent(event);
@@ -26,12 +26,12 @@ export const tweetListController = async (tweetList) => {
   
 }
 
-const renderTweets = (tweets, tweetList) => {
-  tweets.forEach(tweet => {
+const renderanuncios = (anuncios, tweetList) => {
+  anuncios.forEach(anuncio => {
     const tweetContainer = document.createElement('div');
     tweetContainer.classList.add('tweet');
     
-    tweetContainer.innerHTML = buildTweet(tweet);
+    tweetContainer.innerHTML = buildanuncio(anuncio);
 
     tweetList.appendChild(tweetContainer)
   })

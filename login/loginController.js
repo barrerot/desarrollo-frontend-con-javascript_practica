@@ -17,7 +17,7 @@ const submitLogin = async (loginForm) => {
   try {
     dispatchEvent('startLoginUser', null, loginForm)
     const jwt = await loginUser(email, password)
-    alert('login OK');
+    
     localStorage.setItem('token', jwt);
     window.location = './index.html';
     
