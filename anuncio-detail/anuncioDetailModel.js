@@ -22,7 +22,7 @@ export const getTweet = async (tweetId) => {
 }
 
 export const deleteTweet = async (tweetId) => {
-  const endpoint = `api/tweets/${tweetId}`;
+  const endpoint = `api/anuncios/${tweetId}`;
   
   await sparrestApi().delete(endpoint);
 }

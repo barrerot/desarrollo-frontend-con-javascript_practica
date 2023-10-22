@@ -10,7 +10,7 @@ export const tweetDetailController = async (tweetDetail, tweetId) => {
     tweetDetail.innerHTML = buildTweet(tweet);
     handleDeleteTweet(tweet, tweetDetail);
   } catch (error) {
-    dispatchEvent('tweetLoaded', { type: "error", message: "El tweet no existe" }, tweetDetail);
+    dispatchEvent('tweetLoaded', { type: "error", message: "El anuncio no existe" }, tweetDetail);
     setTimeout(() => {
       window.location = './index.html';
     }, 3000);
@@ -32,9 +32,9 @@ const handleDeleteTweet = (tweet, tweetDetail) => {
 
 const addDeleteTweetButton = (tweet, tweetDetail) => {
   const deleteButton = document.createElement('button');
-  deleteButton.textContent = 'Borrar tweet';
+  deleteButton.textContent = 'Borrar anuncio';
   deleteButton.addEventListener('click', async () => {
-    if (confirm('¿Seguro que quieres borrar el tweet?')) {
+    if (confirm('¿Seguro que quieres borrar el anuncio?')) {
       await deleteTweet(tweet.id);
       window.location = 'index.html';
     }
