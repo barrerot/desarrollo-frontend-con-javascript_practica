@@ -36,7 +36,7 @@ const addDeleteTweetButton = (tweet, tweetDetail) => {
   deleteButton.addEventListener('click', async () => {
     if (confirm('¿Seguro que quieres borrar el anuncio?')) {
       await deleteTweet(tweet.id);
-      window.location = 'index.html';
+      window.location = './index.html';
     }
   })
 
