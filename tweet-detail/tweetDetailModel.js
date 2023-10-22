@@ -2,16 +2,19 @@ import { sparrestApi } from "../utils/sparrestApi.js";
 
 const parseTweet = (tweet) => {
   return {
-    handler: tweet.user.username,
-    message: tweet.message,
-    likes: [],
+    nombre: tweet.nombre,
+    descripcion: tweet.descripcion,
+    tipo:tweet.tipo,
+    categoria: tweet.categoria,
+    precio:tweet.precio,
+    imagen: tweet.imagen,
     userId: tweet.user.id,
     id: tweet.id
   }
 }
 
 export const getTweet = async (tweetId) => {
-  const endpoint = `api/tweets/${tweetId}?_expand=user`;
+  const endpoint = `api/anuncios/${tweetId}?_expand=user`;
 
   const tweet = await sparrestApi().get(endpoint)
 
