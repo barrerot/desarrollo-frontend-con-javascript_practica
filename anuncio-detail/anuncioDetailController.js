@@ -1,5 +1,5 @@
-import { deleteTweet, getTweet } from "./tweetDetailModel.js"
-import { buildTweet } from "./tweetDetailView.js";
+import { deleteTweet, getTweet } from "./anuncioDetailModel.js"
+import { buildTweet } from "./anuncioDetailView.js";
 import { dispatchEvent } from "../utils/dispatchEvent.js";
 import { decodeToken } from "../utils/decodeToken.js";
 
