@@ -1,21 +1,21 @@
-import { tweetDetailController } from "./anuncioDetailController.js";
+import { anuncioDetailController } from "./anuncioDetailController.js";
 
 import { notificationsController } from "../notifications/notificationsController.js";
 
 document.addEventListener('DOMContentLoaded', () => {
 
   const params = new URLSearchParams(window.location.search);
-  const tweetId = params.get("id");
+  const anuncioId = params.get("id");
 
   const notifications = document.querySelector("#notifications");
   const showNotification = notificationsController(notifications);
 
-  const tweetDetail = document.querySelector('#tweetDetail');
+  const anuncioDetail = document.querySelector('#anuncioDetail');
 
-  tweetDetail.addEventListener('tweetLoaded', (event) => {
+  anuncioDetail.addEventListener('anuncioLoaded', (event) => {
     showNotification(event.detail.message, event.detail.type);
   })
 
-  tweetDetailController(tweetDetail, tweetId);
+  anuncioDetailController(anuncioDetail, anuncioId);
 
 })

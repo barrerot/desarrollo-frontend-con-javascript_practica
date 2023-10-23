@@ -1,44 +1,44 @@
 import { getanuncios } from "./anuncioListModel.js";
 import { buildanuncio, emptyanuncio } from "./anuncioListView.js";
 
-export const anuncioListController = async (tweetList) => {
-  tweetList.innerHTML = '';
+export const anuncioListController = async (anuncioList) => {
+  anuncioList.innerHTML = '';
   let anuncios = [];
 
   try {
-    dispatchEvent('startLoadingTweets', null, tweetList);
+    dispatchEvent('startLoadingAnuncios', null, anuncioList);
     anuncios = await getanuncios();
   } catch (error) {
-    const event = createCustomEvent('error', 'Error cargando tweets')
-    tweetList.dispatchEvent(event);
+    const event = createCustomEvent('error', 'Error cargando anuncios')
+    anuncioList.dispatchEvent(event);
   } finally {
-    dispatchEvent('finishLoadingTweets', null, tweetList);
+    dispatchEvent('finishLoadingAnuncios', null, anuncioList);
   }
 //console.log(anuncios);
   if (anuncios.length === 0) {
-    tweetList.innerHTML = emptyanuncio();
+    anuncioList.innerHTML = emptyanuncio();
   } else {
-    renderanuncios(anuncios, tweetList);
+    renderanuncios(anuncios, anuncioList);
 
-    const event = createCustomEvent('success', 'Tweets cargados correctamente');
-    tweetList.dispatchEvent(event);
+    const event = createCustomEvent('success', 'Anuncios cargados correctamente');
+    anuncioList.dispatchEvent(event);
   }
   
 }
 
-const renderanuncios = (anuncios, tweetList) => {
+const renderanuncios = (anuncios, anuncioList) => {
   anuncios.forEach(anuncio => {
-    const tweetContainer = document.createElement('div');
-    tweetContainer.classList.add('tweet');
+    const anuncioContainer = document.createElement('div');
+    anuncioContainer.classList.add('anuncio');
     
-    tweetContainer.innerHTML = buildanuncio(anuncio);
+    anuncioContainer.innerHTML = buildanuncio(anuncio);
 
-    tweetList.appendChild(tweetContainer)
+    anuncioList.appendChild(anuncioContainer)
   })
 }
 
 const createCustomEvent = (type, message) => {
-  const event = new CustomEvent("tweetsLoaded", {
+  const event = new CustomEvent("anunciosLoaded", {
     detail: {
       type: type,
       message: message

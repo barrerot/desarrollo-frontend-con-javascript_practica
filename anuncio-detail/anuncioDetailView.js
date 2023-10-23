@@ -1,17 +1,17 @@
-export const buildTweet = (tweet) => {
-  let tweetTemplate = `
-  <span>${tweet.nombre}</span>
-  <p>${tweet.descripcion}</p>
-  <span>${tweet.tipo}</span>
-  <span>${tweet.categoria}</span>
-  <span>${tweet.precio}</span>
+export const buildAnuncio = (anuncio) => {
+  let anuncioTemplate = `
+  <span>${anuncio.nombre}</span>
+  <p>${anuncio.descripcion}</p>
+  <span>${anuncio.tipo}</span>
+  <span>${anuncio.categoria}</span>
+  <span>${anuncio.precio}</span>
 
-  <img src="${tweet.imagen}" alt="Texto alternativo" width="300" height="200">
+  <img src="${anuncio.imagen}" alt="Texto alternativo" width="300" height="200">
   `;
 
-  /*if (tweet.likes.length > 0) {
-    tweetTemplate += `<p> estos usuarios: ${tweet.likes.join(', ')} han dado like al tweet</p>`;
+  /*if (anuncio.likes.length > 0) {
+    anuncioTemplate += `<p> estos usuarios: ${anuncio.likes.join(', ')} han dado like al anuncio</p>`;
   }*/
 
-  return tweetTemplate;
+  return anuncioTemplate;
 }

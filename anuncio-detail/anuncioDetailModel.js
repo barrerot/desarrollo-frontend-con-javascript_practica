@@ -1,28 +1,28 @@
 import { sparrestApi } from "../utils/sparrestApi.js";
 
-const parseTweet = (tweet) => {
+const parseAnuncio = (anuncio) => {
   return {
-    nombre: tweet.nombre,
-    descripcion: tweet.descripcion,
-    tipo:tweet.tipo,
-    categoria: tweet.categoria,
-    precio:tweet.precio,
-    imagen: tweet.imagen,
-    userId: tweet.user.id,
-    id: tweet.id
+    nombre: anuncio.nombre,
+    descripcion: anuncio.descripcion,
+    tipo:anuncio.tipo,
+    categoria: anuncio.categoria,
+    precio:anuncio.precio,
+    imagen: anuncio.imagen,
+    userId: anuncio.user.id,
+    id: anuncio.id
   }
 }
 
-export const getTweet = async (tweetId) => {
-  const endpoint = `api/anuncios/${tweetId}?_expand=user`;
+export const getAnuncio = async (anuncioId) => {
+  const endpoint = `api/anuncios/${anuncioId}?_expand=user`;
 
-  const tweet = await sparrestApi().get(endpoint)
+  const anuncio = await sparrestApi().get(endpoint)
 
-  return parseTweet(tweet);
+  return parseAnuncio(anuncio);
 }
 
-export const deleteTweet = async (tweetId) => {
-  const endpoint = `api/anuncios/${tweetId}`;
+export const deleteAnuncio = async (anuncioId) => {
+  const endpoint = `api/anuncios/${anuncioId}`;
   
   await sparrestApi().delete(endpoint);
 }

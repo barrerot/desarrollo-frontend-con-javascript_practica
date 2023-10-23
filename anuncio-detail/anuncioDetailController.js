@@ -1,16 +1,16 @@
-import { deleteTweet, getTweet } from "./anuncioDetailModel.js"
-import { buildTweet } from "./anuncioDetailView.js";
+import { deleteAnuncio, getAnuncio } from "./anuncioDetailModel.js"
+import { buildAnuncio } from "./anuncioDetailView.js";
 import { dispatchEvent } from "../utils/dispatchEvent.js";
 import { decodeToken } from "../utils/decodeToken.js";
 
-export const tweetDetailController = async (tweetDetail, tweetId) => {
+export const anuncioDetailController = async (anuncioDetail, anuncioId) => {
 
   try {
-    const tweet = await getTweet(tweetId);
-    tweetDetail.innerHTML = buildTweet(tweet);
-    handleDeleteTweet(tweet, tweetDetail);
+    const anuncio = await getAnuncio(anuncioId);
+    anuncioDetail.innerHTML = buildAnuncio(anuncio);
+    handleDeleteAnuncio(anuncio, anuncioDetail);
   } catch (error) {
-    dispatchEvent('tweetLoaded', { type: "error", message: "El anuncio no existe" }, tweetDetail);
+    dispatchEvent('anuncioLoaded', { type: "error", message: "El anuncio no existe" }, anuncioDetail);
     setTimeout(() => {
       window.location = './index.html';
     }, 3000);
@@ -18,27 +18,27 @@ export const tweetDetailController = async (tweetDetail, tweetId) => {
   
 }
 
-const handleDeleteTweet = (tweet, tweetDetail) => {
+const handleDeleteAnuncio = (anuncio, anuncioDetail) => {
   const token = localStorage.getItem('token');
 
   if (token) {
     const { userId } = decodeToken(token);
 
-    if (userId === tweet.userId) {
-      addDeleteTweetButton(tweet, tweetDetail);
+    if (userId === anuncio.userId) {
+      addDeleteAnuncioButton(anuncio, anuncioDetail);
     }
   }
 }
 
-const addDeleteTweetButton = (tweet, tweetDetail) => {
+const addDeleteAnuncioButton = (anuncio, anuncioDetail) => {
   const deleteButton = document.createElement('button');
   deleteButton.textContent = 'Borrar anuncio';
   deleteButton.addEventListener('click', async () => {
     if (confirm('¿Seguro que quieres borrar el anuncio?')) {
-      await deleteTweet(tweet.id);
+      await deleteAnuncio(anuncio.id);
       window.location = './index.html';
     }
   })
 
-  tweetDetail.appendChild(deleteButton);
+  anuncioDetail.appendChild(deleteButton);
 }
