@@ -1,0 +1,152 @@
+{
+  "users": [
+    {
+      "username": "barrerot@gmail.com",
+      "password": "$2b$10$cDxc2vbEBBjxkBSUBOI3muFxfI1dVCCcHNDgHy5OXEwKJEQzolLui",
+      "id": 1
+    },
+    {
+      "username": "carlos@gmail.com",
+      "password": "$2b$10$E2crVxGqnZ8XTLQfNZ05.e5prH2RnYnbXVwazBmOLuAmQyeS.LbzO",
+      "id": 2
+    },
+    {
+      "username": "barrerot99@gmail.com",
+      "password": "$2b$10$E2crVxGqnZ8XTLQfNZ05.e5prH2RnYnbXVwazBmOLuAmQyeS.LbzO",
+      "id": 3
+    },
+    {
+      "username": "luis@bar.com",
+      "password": "$2b$10$E2crVxGqnZ8XTLQfNZ05.e5prH2RnYnbXVwazBmOLuAmQyeS.LbzO",
+      "id": 4
+    },
+    {
+      "username": "prueba@gmail.com",
+      "password": "$2b$10$E2crVxGqnZ8XTLQfNZ05.eP3Qr0naLxaPCe.30ct0Fw3sbOKepzlu",
+      "id": 5
+    }
+  ],
+  "anuncios": [
+    {
+      "nombre": "cama",
+      "descripcion": "Se vende cama con canapé completa como aparece en las imágenes de 150 x 190",
+      "tipo": "venta",
+      "categoria": "Hogar",
+      "precio": "950",
+      "imagen": "https://cdn.wallapop.com/images/10420/fo/gz/__/c10420p948095811/i3554020937.jpg?pictureSize=W640",
+      "userId": 1,
+      "updatedAt": "2023-10-22T18:42:33.652Z",
+      "id": 1
+    },
+    {
+      "nombre": "Mesa escritorio",
+      "descripcion": "Mesa escritorio de madera, color gris oscuro.\nTiene una sobremesa lateral con puerta corredera con 3 estanterías en un lado y 2 en el otro para almacenaje. \nDimensiones: mesa 140 cm largo y 60 cm ancho, mueble sobre mesa lateral con estanterías 120 cm largo y 40 cm ancho",
+      "tipo": "venta",
+      "categoria": "Hogar",
+      "precio": "150",
+      "imagen": "https://cdn.wallapop.com/images/10420/fo/gy/__/c10420p948095216/i3554017975.jpg?pictureSize=W640",
+      "userId": 1,
+      "updatedAt": "2023-10-22T18:43:43.978Z",
+      "id": 2
+    },
+    {
+      "nombre": "Zapatillas Nike Tn",
+      "descripcion": "zapatos blancos para hombre 40NikeSin estrenar",
+      "tipo": "venta",
+      "categoria": "Ropa y calzado",
+      "precio": "100",
+      "imagen": "https://cdn.wallapop.com/images/10420/fo/hc/__/c10420p948112342/i3554087572.jpg?pictureSize=W640",
+      "userId": 1,
+      "updatedAt": "2023-10-22T18:44:57.789Z",
+      "id": 3
+    },
+    {
+      "nombre": "iPhone 13 Blanco",
+      "descripcion": "Se vende iPhone 13 color blanco de 128Gb en perfecto estado. Se vende con el cable de carga y 5 fundas de regalo.",
+      "tipo": "venta",
+      "categoria": "Moviles",
+      "precio": "570",
+      "imagen": "https://cdn.wallapop.com/images/10420/fo/g0/__/c10420p948050282/i3553834438.jpg?pictureSize=W640",
+      "userId": 1,
+      "updatedAt": "2023-10-22T18:46:06.286Z",
+      "id": 4
+    },
+    {
+      "nombre": "Dell Optiplex 3060",
+      "descripcion": "Dell OptiPlex 3060 / i3-8300 / 8 Gb de RAM / Disco duro--> 500GB / SSD --> 256GB, Windows 11 PRO o elegir.\n\nSe vende en pack de 2 por 125 cada uno\nO uno por 150.",
+      "tipo": "venta",
+      "categoria": "Informatica y electronica",
+      "precio": "250",
+      "imagen": "https://cdn.wallapop.com/images/10420/fo/e9/__/c10420p947968859/i3553499016.jpg?pictureSize=W640",
+      "userId": 1,
+      "updatedAt": "2023-10-22T18:47:16.302Z",
+      "id": 5
+    },
+    {
+      "nombre": "MAC BOOK PRO 15 pulgadas",
+      "descripcion": "Vendo ordenador completamente nuevo, por falta de uso. Es del 2018, pero esta perfecto. Se ha usado muy muy poco.",
+      "tipo": "venta",
+      "categoria": "Informatica y electronica",
+      "precio": "1800",
+      "imagen": "https://cdn.wallapop.com/images/10420/fo/fr/__/c10420p948039286/i3553788851.jpg?pictureSize=W640",
+      "userId": 1,
+      "updatedAt": "2023-10-22T18:48:19.969Z",
+      "id": 6
+    },
+    {
+      "nombre": "PlayStation 4",
+      "descripcion": "PlayStation 4 1Tb. Como nueva, muy poco uso.\n2 mandos incluidos.\nTambién se incluyen de regalo los juegos:\nCall of Duty Black Ops 4\nFifa 20",
+      "tipo": "venta",
+      "categoria": "Entretenimiento",
+      "precio": "200",
+      "imagen": "https://cdn.wallapop.com/images/10420/fo/hc/__/c10420p948112232/i3554087156.jpg?pictureSize=W640",
+      "userId": 1,
+      "updatedAt": "2023-10-22T18:49:15.203Z",
+      "id": 7
+    },
+    {
+      "nombre": "Guitarra flamenca",
+      "descripcion": "guitarra flamenca del constructor Eduardo Ferrer año 1973 la guitarra tiene una reparación de hay su precio",
+      "tipo": "venta",
+      "categoria": "Otros",
+      "precio": "1500",
+      "imagen": "https://cdn.wallapop.com/images/10420/fo/9b/__/c10420p947738569/i3552470325.jpg?pictureSize=W640",
+      "userId": 1,
+      "updatedAt": "2023-10-22T18:50:26.450Z",
+      "id": 8
+    },
+    {
+      "nombre": "Mueble de salon",
+      "descripcion": "armario de salón de 4m de largo aprox. altura 2.5 aprox . profundidad 42cm aprox de madera maciza costo 5000e se regala tv Samsung serie 5000 3d con 1 par de gafas para ver películas 3d de 46 pulgadas .\nMedidas del producto\nAncho: 400 cm\nFondo: 42 cm\nAlto: 240 cm",
+      "tipo": "venta",
+      "categoria": "Hogar",
+      "precio": "495",
+      "imagen": "https://cdn.wallapop.com/images/10420/fo/gx/__/c10420p948093770/i3554012112.jpg?pictureSize=W640",
+      "userId": 1,
+      "updatedAt": "2023-10-22T18:51:27.746Z",
+      "id": 9
+    },
+    {
+      "nombre": "Chaqueta moto hombre",
+      "descripcion": "Marca Dainesse talla M.\nUsada muy poco.\nRecién sacada del tinte.\nMuy bien cuidada\nCon forro.",
+      "tipo": "venta",
+      "categoria": "Ropa y calzado",
+      "precio": "150",
+      "imagen": "https://cdn.wallapop.com/images/10420/fo/h8/__/c10420p948108068/i3554070524.jpg?pictureSize=W640",
+      "userId": 1,
+      "updatedAt": "2023-10-22T18:52:37.702Z",
+      "id": 10
+    },
+    {
+      "nombre": "Teléfono Xiaomi Redmi Note 12 Pro 265 Gb",
+      "descripcion": "XiaomiRedmi Note 12 Pro Sin abrir. Perfecto para regalo de esta Navidad\n",
+      "tipo": "venta",
+      "categoria": "Moviles",
+      "precio": "210",
+      "imagen": "https://cdn.wallapop.com/images/10420/fo/e0/__/c10420p947957747/i3553454321.jpg?pictureSize=W640",
+      "userId": 1,
+      "updatedAt": "2023-10-22T18:53:40.575Z",
+      "id": 11
+    }
+  ]
+}
