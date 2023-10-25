@@ -5,6 +5,15 @@ import { loaderController } from "./loader/loaderController.js";
 
 const notifications = document.getElementById('notifications');
 
+const queryString = window.location.search;
+
+const searchParams = new URLSearchParams(queryString);
+
+let filter= searchParams.get("filter");
+
+if(filter==null){
+  filter='';
+}
 
 const showNotification = notificationsController(notifications);
 const loader = document.getElementById('loader');
@@ -23,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
     hide();
   })
 
-  anuncioListController(anuncioList);
+  anuncioListController(anuncioList,filter);
 
   const session = document.getElementById('session');
   sessionController(session);

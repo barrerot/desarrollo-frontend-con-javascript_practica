@@ -1,13 +1,14 @@
 import { getanuncios } from "./anuncioListModel.js";
 import { buildanuncio, emptyanuncio } from "./anuncioListView.js";
 
-export const anuncioListController = async (anuncioList) => {
+export const anuncioListController = async (anuncioList,filter) => {
   anuncioList.innerHTML = '';
   let anuncios = [];
 
   try {
     dispatchEvent('startLoadingAnuncios', null, anuncioList);
-    anuncios = await getanuncios();
+    if(filter==null){filter="";}
+    anuncios = await getanuncios(filter);
   } catch (error) {
     const event = createCustomEvent('error', 'Error cargando anuncios')
     anuncioList.dispatchEvent(event);

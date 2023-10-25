@@ -47,10 +47,27 @@
   <body>
     <h1>JS-pop</h1>
     <nav id="session"></nav>
+    <form id="searchForm">
+      <input type="text" id="searchInput" name="searchInput" placeholder="Ingresa tu búsqueda">
+      <button type="submit">Buscar</button>
     <section id="loader"></section>
     <section id="notifications"></section>
     <section id="anuncios"></section>
 
     <script type="module" src="./index.js"></script>
+    <script>
+      document.getElementById("searchForm").addEventListener("submit", function(event) {
+          event.preventDefault(); // Evitar el comportamiento predeterminado del formulario
+
+          // Obtener el valor del input de búsqueda
+          const searchTerm = document.getElementById("searchInput").value;
+
+          // Construir la URL de redirección
+          const redirectUrl = "index.html" + "?filter=" + encodeURIComponent(searchTerm);
+
+          // Redireccionar a la URL construida
+          window.location.href = redirectUrl;
+      });
+  </script>
   </body>
 </html>

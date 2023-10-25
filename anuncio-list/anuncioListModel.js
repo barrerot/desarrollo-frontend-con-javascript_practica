@@ -12,8 +12,8 @@ const transformanuncios = (anuncios) => {
   }))
 }
 
-export const getanuncios = async () => {
-  const url = "http://localhost:8000/api/anuncios?_expand=user";
+export const getanuncios = async (filter) => {
+  const url = "http://localhost:8000/api/anuncios?_expand=user&q="+filter;
   let parsedanuncios = [];
 
   try {
