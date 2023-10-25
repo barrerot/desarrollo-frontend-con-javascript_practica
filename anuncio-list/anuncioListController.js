@@ -14,7 +14,7 @@ export const anuncioListController = async (anuncioList) => {
   } finally {
     dispatchEvent('finishLoadingAnuncios', null, anuncioList);
   }
-//console.log(anuncios);
+
   if (anuncios.length === 0) {
     anuncioList.innerHTML = emptyanuncio();
   } else {
