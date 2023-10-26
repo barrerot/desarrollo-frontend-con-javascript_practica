@@ -23,7 +23,7 @@ export const sparrestApi = () => {
     const token = localStorage.getItem('token');
 
     try {
-      response = await fetch(url, {
+      const response = await fetch(url, {
         method: "DELETE",
         headers: {
           'Content-type': 'application/json',
